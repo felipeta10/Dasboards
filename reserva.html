@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário   
+ de Reserva de Viagem</title>
+    <style>
+        form div { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 5px; 
+        }
+
+        form label {
+            margin-right: 10px; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulário de Reserva de Viagem</h1>
+
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>   
+
+                <input type="email" id="email" name="email" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Serviços Desejados</legend>
+            <div>
+                <input type="checkbox" id="passagens" name="servicos" value="passagens">
+                <label for="passagens">Compra de Passagens</label>
+            </div>
+            <div>
+                <input type="checkbox" id="hospedagem" name="servicos" value="hospedagem">
+                <label for="hospedagem">Reserva de Hospedagem</label>
+            </div>
+            <div>
+                <input type="checkbox" id="veiculos" name="servicos" value="veiculos">
+                <label for="veiculos">Aluguel de Veículos</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Forma de Pagamento</legend>
+            <div>
+                <input type="radio" id="cartao" name="pagamento" value="cartao" required>
+                <label for="cartao">Cartão de Crédito</label>
+            </div>
+            <div>
+                <input type="radio" id="boleto" name="pagamento" value="boleto">
+                <label for="boleto">Boleto</label>
+            </div>
+            <div>
+                <input type="radio" id="pix" name="pagamento" value="pix">
+                <label for="pix">PIX</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Prazo de Pagamento</legend>
+            <div>
+                <label for="prazo">Selecione:</label>
+                <select id="prazo" name="prazo">
+                    <option value="avista">À Vista</option>
+                    <option value="5x">Cinco Vezes Sem Juros</option>
+                    <option value="10x">Dez Vezes Com Juros</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Observações</legend>
+            <div>
+                <label for="observacoes">Observações Adicionais:</label><br>
+                <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea>
+            </div>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>
